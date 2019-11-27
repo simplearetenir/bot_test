@@ -3,7 +3,7 @@ include Facebook::Messenger
 
 Facebook::Messenger::Subscriptions.subscribe(
     access_token: ENV["ACCESS_TOKEN"],
-    subscribed_fields: ['messages'] #, 'messaging_account_linking', 'message_deliveries', 'message_echoes', 'messaging_game_plays', 'messaging_handovers', 'messaging_optins', 'messaging_policy_enforcement', 'messaging_postbacks', 'message_reactions', 'message_reads', 'messaging_referrals', 'standby' ]
+    subscribed_fields: ['messages', 'messaging_postbacks', 'messaging_optins'] #, 'messaging_account_linking', 'message_deliveries', 'message_echoes', 'messaging_game_plays', 'messaging_handovers', 'messaging_policy_enforcement', 'message_reactions', 'message_reads', 'messaging_referrals', 'standby' ]
 )
 
 Bot.on :message do |message|
